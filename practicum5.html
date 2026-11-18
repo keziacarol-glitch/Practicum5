@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>QuizPulse</title>
+<style>
+body {
+  font-family: Arial;
+  background-color: lightyellow;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: purple;
+}
+.menu li {
+  position: relative;
+}
+.menu a {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+}
+.menu a:hover {
+  background-color: pink;
+  color: black;
+}
+
+/* hover drop-down menu */
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: purple;
+}
+.menu li:hover .dropdown {
+  display: block;
+}
+
+/* grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 20px;
+}
+.box {
+  background-color: white;
+  border: 2px solid purple;
+  padding: 20px;
+  text-align: center;
+}
+
+/* for phone */
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: column;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<ul class="menu">
+  <li><a href="#">Home</a></li>
+  <li>
+    <a href="#">Quizzes</a>
+    <ul class="dropdown">
+      <li><a href="#">HTML Quiz</a></li>
+      <li><a href="#">CSS Quiz</a></li>
+      <li><a href="#">JS Quiz</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Leaderboard</a></li>
+  <li><a href="#">Login</a></li>
+</ul>
+
+<h1 align="center">QuizPulse</h1>
+<p align="center">Play quizzes, earn points and win badges!</p>
+
+<div class="grid">
+  <div class="box">HTML Quiz</div>
+  <div class="box">CSS Quiz</div>
+  <div class="box">JS Quiz</div>
+</div>
+
+</body>
+</html>
